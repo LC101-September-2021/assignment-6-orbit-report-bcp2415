@@ -55,10 +55,16 @@ export class AppComponent {
       if (name.indexOf(searchTerm) >= 0) {
         matchingSatellites.push(this.sourceList[i]);
       }
-      if (type.indexOf(searchTerm) >= 0) {
+      if (
+        type.indexOf(searchTerm) >= 0 &&
+        !matchingSatellites.includes(this.sourceList[i])
+      ) {
         matchingSatellites.push(this.sourceList[i]);
       }
-      if (orbitType.indexOf(searchTerm) >= 0) {
+      if (
+        orbitType.indexOf(searchTerm) >= 0 &&
+        !matchingSatellites.includes(this.sourceList[i])
+      ) {
         matchingSatellites.push(this.sourceList[i]);
       }
     }
