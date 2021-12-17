@@ -19,7 +19,8 @@ export class Satellite {
     this.operational = operational;
   }
 
-  isSpaceDebris(): boolean {
+  isSpaceDebris(object): boolean {
+    console.log("iSD called");
     return this.type === "Space Debris";
   }
 }
